@@ -6,11 +6,11 @@
   "scripts": {
     "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
     "dev": "node init && concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "dev:backend": "cd backend && npm run dev",
-    "dev:frontend": "cd frontend && cross-env PORT=3001 npm start",
+    "dev:backend": "node init && cd backend && npm run dev",
+    "dev:frontend": "node init && cd frontend && cross-env PORT=3001 npm start",
     "start": "node init && concurrently \"npm run start:backend\" \"npm run start:frontend\"",
-    "start:backend": "cd backend && npm start",
-    "start:frontend": "cd frontend && cross-env PORT=3001 npm start",
+    "start:backend": "node init && cd backend && npm start",
+    "start:frontend": "node init && cd frontend && cross-env PORT=3001 npm start",
     "build": "node init && cd frontend && npm run build"
   },
   "devDependencies": {
